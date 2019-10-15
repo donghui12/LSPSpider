@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="TCMSP (formerly known as http://tcmspnw.com) is a database for providing systems pharmacology analysis of TCM(Traditional Chinese Medicine),including evaluating ADME, potential targets and associated diseases." />
+    <meta name="keywords" content="tcm database,中药系统药理学,tcmsp,系统药理学,Systems pharmacology,Network pharmacology,TCM,Systems biology,Traditional Chinese Medicine,Traditional Chinese Medicine Systems Pharmacology Database and Analysis Platform"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TCMSP - Traditional Chinese Medicine Systems Pharmacology Database and Analysis Platform</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script type="text/javascript" src="js/jquery.min1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min1.8.24.js"></script>
+	<script type="text/javascript" src="js/jquery.highlight-4.js"></script>
+</head>
+<body>
+<!--[if lte IE 8]>
+    <div class="alert alert-block alert-error fade in" id="note">
+        <button type="button" class="close" onclick="closeclick()">×</button>
+        <p style="font-size:18px" class="alert-heading">Sorry, your browser is not supported!!!</p>
+        <p>This website works best with latest version of <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a>, <a href="http://www.apple.com/safari/">Safari</a> or IE9+.</p>
+        <p>
+          <a class="btn btn-danger" href="recommended_browsers.html">See details</a>
+        </p>
+    </div>
+<script type="text/javascript">
+$(".alert").alert(close)
+</script>
+<![endif]-->
+<div id="header">
+    <script>clickclose();</script>
+    <div id="header_left">
+        <div class="logo">
+            <a href="index.php"><img src="img/lsplogo.png" alt="LSP" /></a>
+        </div>
+	</div>
+	<div id="header_right">
+		<div id="nav_name">
+			<div id="lab_name">
+				计算系统生物学实验室
+			</div>
+		</div>
+        <div id="nav">
+            <ul style="color:#000">
+                <li><a class=bi href="index.php">首页<span>Home</span></a></li>
+                <li><a class=bi href="#">软件<span>Database</span></a>
+                    <ul>
+                        <li><a href="tcmsp.php">TCMSP</a></li>
+			<li><a href="CancerHSP.php">CancerHSP</a></li>
+                        <li><a href="cvdsp.php">CVDSP</a></li>
+						<li><a href="predc.php">PreDC</a></li>
+                    </ul>
+                </li>
+<!--                <li><a class=bi href="members.php">团队风采<span>Members</span></a></li>-->
+                <li><a class=bi href="articles.php?id=2">发表文章<span>Publications</span></a></li>
+                <li><a class=bi href="reference.php">引用查询<span>Reference</span></a></li>
+                <li><a class=bi href="articles.php?id=52">专利展示<span>Patents</span></a></li>
+                <li><a class=bi href="news.php">团队动态<span>News</span></a></li>
+                <li><a class=bi href="articles.php?id=1">工具<span>Tools</span></a></li>
+                <li><a class=bi href="articles.php?id=30">联系我们<span>Contact</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--		<div style="line-height:32px;"><marquee direction="right" scrollamount="9" scrolldelay="100"><a href="attachment/ycz/2019_7.pdf" target="_blank" style="color:#ff0000;font-size:24px;font-family:'黑体'"><strong>2019年系统和网络药理学原理、方法及应用研讨班(第7期)即将开课！</strong></a></marquee></div>-->
+<div id="container_lsp"> <!-- container start! close in footer.php -->
+
+
+<div id="sideNav">
+     <div class='section'>
+         <div class="stitle">TCMSP MENU</div>
+         <div class="scontent">
+             <li><a href="load_intro.php?id=39" style="color:#ff0000">How to search (Movie tutorial)</a></li>
+             <li><a href="load_intro.php?id=43" style="color:#ff0000">TCMSP User Guide</a></li>
+             <li><a href="browse.php?qc=herbs">Browse Database</a></li>
+             <!--<li><a href="load_intro.php?id=31">Download</a></li>-->
+             <!-- <li><a href="load_intro.php?id=32">About TCMSP (简体中文)</a></li> -->
+             <li><a href="load_intro.php?id=27">Highlights</a></li>
+             <li><a href="load_intro.php?id=29">Parameter Information</a></li>
+             <li><a href="load_intro.php?id=42">Comparison with other TCM databases</a></li>
+             <li><a href="load_intro.php?id=41">Cited by other articles</a></li>
+             <li><a href="load_intro.php?id=33">TCMSP update log</a></li>
+             <li><a href="load_intro.php?id=30">Contact us</a></li>
+             <li><a href="load_intro.php?id=40">About TCMSP</a></li>
+         </div>
+     </div>
+</div>
+
+<div class="right">
+<div class="searcharea">
+    <div class="logomini"><a href="tcmsp.php"><img style="width:38px;height:45px;padding-right:5px" src="css/images/tcmsp_s.png" alt="TcmSP" /></a></div>
+
+<form action="tcmspsearch.php" method="get" id="SearchForm" style="padding-top:10px;float:left">
+<div class="input-prepend input-append">
+  <select name="qs" id="searchItemTcm" class="selectpicker" data-width="140px">
+<option value="herb_all_name">Herb name</option><option value="molecule_name">Chemical name</option><option value="inchikey">InChIKey</option><option value="cas">CAS</option><option value="target_name">Target name</option><option value="disease_name">Disease name</option>      <!-- <option value="file_ID" >File ID</option> -->
+  </select>
+  <input type="text" class="input-xlarge" id="inputVarTcm" name="q" onfocus="this.value = '';">
+	<input type="hidden" name="token" value="f13c3845facf829e2e917dd8d8b10c4c">
+  <input type="submit" class="btn" value="Search" id="searchBtTcm">
+  <input type="button" class="btn" value="Advanced" id="Advanced">
+</div>
+</form>
+</div>
+<script>
+$(document).ready(function() {
+  $('.selectpicker').selectpicker();
+});
+</script>
+
+
+<div id="kendoResult">   <!-- div #kendoResult to the head of footer -->
+
+Error querying database..</div> <!-- container over! start in header.php -->
+<div class="returnTop" title="TOP">
+  <span class="s"></span>
+  <span class="b"></span>
+  to top
+</div>
+<div id="footer">
+
+  <p id="funding">
+    Copyright © 2012 - 2019  Lab of Systems Pharmacology. All Rights Reserved.
+  </p>
+  <p id="about">
+  	<a href="tcmsp.php">TCMSP</a> Version: <strong>2.3</strong> &#166; <a href="CancerHSP.php">CancerHSP</a> Version: <strong>1.3</strong> &#166; <a href="predc.php">PreDC</a> Version: <strong>1.0</strong></br>  <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3201203&c=9603922"> visits since 2013.11
+  </p>
+  <p>
+
+  </p>
+</div>
+</body>
+    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/myjs_CancerHSP.js"></script>
+    <script type="text/javascript" src="js/kendo.web.min.js"></script>
+<script type="text/javascript" src="cytoscape/js/cytoscapeweb.min.js"></script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbe6af90d9662a084ea4e4ce5b3f0f47b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>
+
